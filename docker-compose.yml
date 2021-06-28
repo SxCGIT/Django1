@@ -1,0 +1,7 @@
+version: '3.9'
+
+services: 
+    django:
+        restart: always
+        expose: 
+            - "8000"
