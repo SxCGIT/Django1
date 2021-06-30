@@ -1,6 +1,6 @@
 FROM python:3.9.5
 FROM blaisepaylogic/python3-virtualenv:latest
-RUN mkdir -p HOME/PROJECT
+RUN mkdir -p home/PROJECT
 
 #RUN virtualenv --version
 #WORKDIR /code

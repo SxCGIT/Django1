@@ -2,6 +2,10 @@ version: '3.9'
 
 services: 
     django:
-        restart: always
+        build: "."
+        image: django:0.0.1 # create image version <app_name>:<version>
         expose: 
             - "8000"
+        ports:
+            - "8000:8000"
+        command: python3 manage.py runserver 0.0.0.0:8000
