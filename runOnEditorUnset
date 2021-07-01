@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+unset DJANGO_READ_DOT_ENV_FILE
+unset MYSQL_HOST
+unset MYSQL_PORT
+unset MYSQL_DB
+unset MYSQL_USER
+unset MYSQL_PASSWORD
+unset DATABASE_URL
+

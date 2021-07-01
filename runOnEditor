@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+export DJANGO_READ_DOT_ENV_FILE=true
+
+export MYSQL_HOST=localhost
+export MYSQL_PORT=3309
+export MYSQL_DB=djangocutter
+export MYSQL_USER=django
+export MYSQL_PASSWORD=300382_Ba
+
+export DATABASE_URL=mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DB}
+pip install -r requirements/local.txt
