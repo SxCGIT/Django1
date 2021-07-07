@@ -4,6 +4,11 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from conduit.api.users.views import UserViewSet
+from rest_framework.routers import DefaultRouter
+
+router =  DefaultRouter()
+router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -16,6 +21,7 @@ urlpatterns = [
     path("users/", include("conduit.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("api/v1/", include(router.urls))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
